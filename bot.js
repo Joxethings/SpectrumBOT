@@ -30,5 +30,7 @@ client.on('message', function (user, userID, message){
                 }
             });
 });
+   }
+}
   
   client.login(process.env.BOT_TOKEN);
