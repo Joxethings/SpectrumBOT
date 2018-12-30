@@ -1,0 +1,2 @@
+# SpectrumBOT
+Eve Online BOT
