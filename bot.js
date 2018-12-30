@@ -7,7 +7,7 @@ client.on('ready', () => {
   console.log('I am ready!');
 });
 
-client.on('message', function (user, userID, channelID, message, evt) {
+client.on('message', message => {
   if (message.content === 'ping') {
     message.reply('PONG');
     }
