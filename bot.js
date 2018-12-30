@@ -7,14 +7,16 @@ client.on('ready', () => {
   console.log('I am ready!');
 });
 
-client.on('message', function (user, userID, message){
+client.on('message', function (user, userID, channelID, message, evt) {
   if (message.content === 'ping') {
     message.reply('PONG');
     }
-   if (bot.directMessages[channelID]) {
-        if (message.toLowerCase().startsWith("!auth")) {
 
-            bot.sendMessage({
+
+    //If DM client
+    if (client.directMessages[channelID]) {
+        if (message.toLowerCase().startsWith("!auth")) {
+            client.sendMessage({
                 to: userID,
                 embed: {
                     "title": "Authorization!",
@@ -29,8 +31,8 @@ client.on('message', function (user, userID, message){
                     }
                 }
             });
-});
-   }
-}
+			}
+			};
+			};
   
   client.login(process.env.BOT_TOKEN);
