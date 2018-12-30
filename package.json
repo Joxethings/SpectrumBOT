@@ -1,7 +1,7 @@
 {
   "name": "SpectrumBOT",
   "description": "Eve Online BOT",
-  "version": "1.0.1",
+  "version": "0.0.0",
   "main": "bot.js",
   "scripts": {
     "start": "node bot.js"
